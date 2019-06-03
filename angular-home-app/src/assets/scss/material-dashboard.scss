@@ -1,0 +1,159 @@
+/*!
+
+ =========================================================
+ * Material Dashboard Angular - v2.1.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-dashboard-angular2
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+ @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+ @import "core/variables";
+ @import "core/mixins";
+ @import "~bootstrap/scss/bootstrap";
+
+
+ // Core Components
+ @import "core/buttons";
+ @import "core/checkboxes";
+ @import "core/radios";
+ @import "core/forms";
+ @import "core/input-group";
+ @import "core/images";
+ @import "core/navbar";
+ @import "core/alerts";
+ @import "core/type";
+ @import "core/tabs";
+ @import "core/tooltip";
+ @import "core/popover";
+ @import "core/dropdown";
+ @import "core/togglebutton";
+ @import "core/ripples";
+ @import "core/footers";
+ @import "core/sidebar-and-main-panel";
+ @import "core/fixed-plugin";
+ @import "core/tables";
+ @import "core/misc";
+
+@import "core/cards";
+@import "core/cards/card-stats";
+@import "core/cards/card-profile";
+@import "core/cards/card-plain";
+
+ //plugin scss
+ @import "core/plugins/animate";
+ @import "core/plugins/chartist";
+ @import "core/plugins/perfect-scrollbar";
+
+ @import "core/responsive";
+.main-panel{
+    position: relative;
+    z-index: 10;
+}
+ .demo-single{
+     padding-bottom: 6px;
+     margin-top: 10px;
+     float: left;
+     width: 100%;
+     
+     h4 {
+        font-weight: 400;
+        font-size: 15px;
+     }
+     .icons{
+        float: left;
+
+        fa-icon {
+            font-size: 18px;
+            margin-right: 12px;
+        }
+        .ppt {
+            color: #C4412C;
+        }
+        .whitepaper {
+            color: #254C8E;
+        }
+        .demo {
+            color: #F1B017 !important;
+        }
+        .video {
+            color: #FF0004;
+        }
+     }
+ }
+.demo-single + mat-divider {
+    float: left;
+    width: 100%;
+    margin-top: 12px;
+}
+.demo-tooltip{
+    background: #000000;
+    color: #fff !important;
+    font-size: 13px !important;
+}
+.example-card {
+    .img-card {
+        height: 200px;
+        overflow: hidden;
+        vertical-align: top;
+    }
+}
+.ledgers-card {
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all 0.5s !important;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(0, -15px);
+    }
+    .img-card {
+        max-height: 305px;
+        overflow: hidden;
+        vertical-align: top;
+    }
+}
+.legends{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 10px;
+    width: 120px;
+    z-index: 12;
+    .single {
+        float: left;
+        width: 100%;
+        margin-bottom: 5px;
+
+        span {
+            width: 16px;
+            height: 16px;
+            float: left;
+            margin-right: 10px;
+            &.green {
+                background: #43a047;
+            }
+            &.yellow {
+                background: #F1B017;
+            }
+            &.red {
+                background: #d81b60;
+            }
+        }
+        p {
+            font-size: 11px;
+            margin-bottom: 0;
+            margin-top: -3px;
+        }
+    }
+}

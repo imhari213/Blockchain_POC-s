@@ -1,0 +1,44 @@
+<div>
+  <a href="">
+    <img class="logo2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyuZ6x3zINVWsvpCMCeqXYDgARqcwoO42EOXqzGe30o653HhUg">
+  </a>
+
+  <div class="container2">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="heading">
+        <h2>
+          UCC Fillings Summary
+        </h2>
+      </div>
+    </div>
+    <br>
+    <br>
+    <table id="example" class="table table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>PDF Hash</th>
+          <th>Transaction Id</th>
+          <th>Filling Docs</th>
+          <th>Validate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of fillingData">
+          <td>{{data.id}}</td>
+          <td>{{data.PDF_Hash}}</td>
+          <td>{{data.Transaction_ID}}</td>
+          <td>
+            <a class="menu_links" (click)="pdfDownload(data.Pdf_Path)">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4r2ZjW06FOGw5YKI0t9BJZm3N1l8_F5tkCLVyF5yMjHEShGrJrg" style="width: 27px"
+              />
+            </a>
+          </td>
+          <td>
+            <button class="popup" (click)="validateButton(data.Transaction_ID)">Click</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

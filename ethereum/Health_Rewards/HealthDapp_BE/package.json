@@ -1,0 +1,31 @@
+{
+  "name": "healthdapp-be",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "asyncawait": "^1.0.7",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "eth-lightwallet": "^3.0.1",
+    "ethereumjs-tx": "^1.3.7",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
+    "sequelize": "^4.39.0",
+    "sequelize-cli": "^4.1.1",
+    "wallet-address-validator": "^0.2.1",
+    "web3": "^1.0.0-beta.27",
+    "web3-eth-accounts": "^1.0.0-beta.36"
+  }
+}

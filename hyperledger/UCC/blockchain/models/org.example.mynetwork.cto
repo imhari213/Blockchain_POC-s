@@ -1,0 +1,15 @@
+/**
+ * My commodity trading network
+ */
+namespace org.example.mynetwork
+asset NewFilling identified by hashId {
+    o String hashId
+}
+
+transaction StoreHash {
+    --> NewFilling newFilling
+}
+
+event BasicEvent {
+  --> NewFilling newfilling
+}

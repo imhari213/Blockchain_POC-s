@@ -1,0 +1,1930 @@
+{
+  "contractName": "Registration",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "name": "Registered",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "name": "withContract",
+          "type": "address"
+        },
+        {
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "name": "parentId",
+          "type": "bytes32"
+        },
+        {
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "rlpData",
+          "type": "bytes"
+        }
+      ],
+      "name": "registerMembership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "name": "withContract",
+          "type": "address"
+        },
+        {
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "name": "parentId",
+          "type": "bytes32"
+        },
+        {
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "rlpData",
+          "type": "bytes"
+        }
+      ],
+      "name": "unregisterMembership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052610402806100136000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632bef1a408114610050578063fcd009ee14610050575b600080fd5b34801561005c57600080fd5b50604080516020600460c43581810135601f81018490048402850184019095528484526100df94823573ffffffffffffffffffffffffffffffffffffffff9081169560248035831696604435841696606435966084359660a435909616953695929460e49492019181908401838280828437509497506100f19650505050505050565b60408051918252519081900360200190f35b60006101028888888888888861010e565b98975050505050505050565b600080600061011d858861034e565b91508773ffffffffffffffffffffffffffffffffffffffff166307bcb6aa8b30858a8a8a6040518763ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001856000191660001916815260200184600019166000191681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561025b578181015183820152602001610243565b50505050905090810190601f1680156102885780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b1580156102ac57600080fd5b505af11580156102c0573d6000803e3d6000fd5b505050506040513d60208110156102d657600080fd5b50516040805173ffffffffffffffffffffffffffffffffffffffff808c168252602082018b9052818301849052881660608201526001608082015290519192507f3f2aa18c26794287822dc6066f89faec8e22d215f75b9cd54d90597cc943e945919081900360a00190a19998505050505050505050565b60008115156103cd576040516c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff85168102825232818102601484015233918202602884015285929091906000903690434090603c8101848480828437909101928352505060405190819003602001902095506103d0945050505050565b50805b929150505600a165627a7a723058205acca0631e7f16154e6f8e6c56c5e04efa72d92bc79398256d195a47b1b85b7e0029",
+  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632bef1a408114610050578063fcd009ee14610050575b600080fd5b34801561005c57600080fd5b50604080516020600460c43581810135601f81018490048402850184019095528484526100df94823573ffffffffffffffffffffffffffffffffffffffff9081169560248035831696604435841696606435966084359660a435909616953695929460e49492019181908401838280828437509497506100f19650505050505050565b60408051918252519081900360200190f35b60006101028888888888888861010e565b98975050505050505050565b600080600061011d858861034e565b91508773ffffffffffffffffffffffffffffffffffffffff166307bcb6aa8b30858a8a8a6040518763ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001856000191660001916815260200184600019166000191681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561025b578181015183820152602001610243565b50505050905090810190601f1680156102885780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b1580156102ac57600080fd5b505af11580156102c0573d6000803e3d6000fd5b505050506040513d60208110156102d657600080fd5b50516040805173ffffffffffffffffffffffffffffffffffffffff808c168252602082018b9052818301849052881660608201526001608082015290519192507f3f2aa18c26794287822dc6066f89faec8e22d215f75b9cd54d90597cc943e945919081900360a00190a19998505050505050505050565b60008115156103cd576040516c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff85168102825232818102601484015233918202602884015285929091906000903690434090603c8101848480828437909101928352505060405190819003602001902095506103d0945050505050565b50805b929150505600a165627a7a723058205acca0631e7f16154e6f8e6c56c5e04efa72d92bc79398256d195a47b1b85b7e0029",
+  "sourceMap": "75:738:9:-;;;;;;;;;",
+  "deployedSourceMap": "75:738:9:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;463:344;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;463:344:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;463:344:9;;-1:-1:-1;463:344:9;;-1:-1:-1;;;;;;;463:344:9;;;;;;;;;;;;;;;;;;686:7;712:88;734:6;742:12;756:6;764:8;774:7;783;792;712:21;:88::i;:::-;705:95;463:344;-1:-1:-1;;;;;;;;463:344:9:o;1472:843:2:-;1699:7;1731:22;1841:21;1756:24;1762:7;1771:8;1756:5;:24::i;:::-;1731:49;;1865:6;:15;;;1898:6;1927:4;1950:14;1982:7;2007;2032;1865:188;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1865:188:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1865:188:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1865:188:2;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1865:188:2;2072:192;;;;;;;;;1865:188;2072:192;;;;;;;;;;;;;;;;;2245:4;2072:192;;;;;;1865:188;;-1:-1:-1;2072:192:2;;;;;;;;;;2286:13;1472:843;-1:-1:-1;;;;;;;;;1472:843:2:o;337:258::-;399:7;422:17;;418:171;;;462:76;;;;;;;;;;481:9;462:76;;;;;;;492:10;462:76;;;;;;;472:7;;481:9;;492:10;504:8;;;;524:12;514:23;;462:76;;;504:8;;;;462:76;;;;;;;;-1:-1:-1;;462:76:2;;;;;;;;;;;-1:-1:-1;455:83:2;;-1:-1:-1;;;;;455:83:2;418:171;-1:-1:-1;576:2:2;418:171;337:258;;;;:::o",
+  "source": "\n\nimport \"./Role.sol\";\nimport \"./Ownable.sol\";\nimport \"./Membership.sol\";\n\ncontract Registration is Membership {\n    function registerMembership(\n        address caller,\n        Role withContract,\n        Role asRole,\n        bytes32 parentId,\n        bytes32 childId,\n        address account,\n        bytes rlpData\n    ) public returns (bytes32) {\n        return _registerMembership(caller, withContract, asRole, parentId, childId, account, rlpData);\n    }\n\n    function unregisterMembership(\n        address caller,\n        Role withContract,\n        Role asRole,\n        bytes32 parentId,\n        bytes32 childId,\n        address account,\n        bytes rlpData\n    ) public returns (bytes32) {\n        return _unregisterMembership(caller, withContract, asRole, parentId, childId, account, rlpData);\n    }\n\n  \n}\n",
+  "sourcePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Registration.sol",
+  "ast": {
+    "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Registration.sol",
+    "exportedSymbols": {
+      "Registration": [
+        1802
+      ]
+    },
+    "id": 1803,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Role.sol",
+        "file": "./Role.sol",
+        "id": 1737,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 1913,
+        "src": "2:20:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 1738,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 635,
+        "src": "23:23:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Membership.sol",
+        "file": "./Membership.sol",
+        "id": 1739,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 348,
+        "src": "47:26:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1740,
+              "name": "Membership",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 347,
+              "src": "100:10:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Membership_$347",
+                "typeString": "contract Membership"
+              }
+            },
+            "id": 1741,
+            "nodeType": "InheritanceSpecifier",
+            "src": "100:10:9"
+          }
+        ],
+        "contractDependencies": [
+          347
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1802,
+        "linearizedBaseContracts": [
+          1802,
+          347
+        ],
+        "name": "Registration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1770,
+              "nodeType": "Block",
+              "src": "347:110:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1761,
+                        "name": "caller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1743,
+                        "src": "384:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1762,
+                        "name": "withContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1745,
+                        "src": "392:12:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1763,
+                        "name": "asRole",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1747,
+                        "src": "406:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1764,
+                        "name": "parentId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1749,
+                        "src": "414:8:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1765,
+                        "name": "childId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1751,
+                        "src": "424:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1766,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1753,
+                        "src": "433:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1767,
+                        "name": "rlpData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1755,
+                        "src": "442:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 1760,
+                      "name": "_registerMembership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 295,
+                      "src": "364:19:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_Role_$1912_$_t_contract$_Role_$1912_$_t_bytes32_$_t_bytes32_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (address,contract Role,contract Role,bytes32,bytes32,address,bytes memory) returns (bytes32)"
+                      }
+                    },
+                    "id": 1768,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "364:86:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1759,
+                  "id": 1769,
+                  "nodeType": "Return",
+                  "src": "357:93:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1771,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "registerMembership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1743,
+                  "name": "caller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "154:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1745,
+                  "name": "withContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "178:17:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1744,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "178:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1747,
+                  "name": "asRole",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "205:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1746,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "205:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1749,
+                  "name": "parentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "226:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1748,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1751,
+                  "name": "childId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "252:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1750,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1753,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "277:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1752,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "277:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1755,
+                  "name": "rlpData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "302:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1754,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:177:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1758,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "338:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1757,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:9:9"
+            },
+            "scope": 1802,
+            "src": "117:340:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1800,
+              "nodeType": "Block",
+              "src": "695:112:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1791,
+                        "name": "caller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1773,
+                        "src": "734:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1792,
+                        "name": "withContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1775,
+                        "src": "742:12:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1793,
+                        "name": "asRole",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1777,
+                        "src": "756:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1794,
+                        "name": "parentId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1779,
+                        "src": "764:8:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1795,
+                        "name": "childId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1781,
+                        "src": "774:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1796,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1783,
+                        "src": "783:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1797,
+                        "name": "rlpData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1785,
+                        "src": "792:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 1790,
+                      "name": "_unregisterMembership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 346,
+                      "src": "712:21:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_Role_$1912_$_t_contract$_Role_$1912_$_t_bytes32_$_t_bytes32_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (address,contract Role,contract Role,bytes32,bytes32,address,bytes memory) returns (bytes32)"
+                      }
+                    },
+                    "id": 1798,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "712:88:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1789,
+                  "id": 1799,
+                  "nodeType": "Return",
+                  "src": "705:95:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1801,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "unregisterMembership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1773,
+                  "name": "caller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "502:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1772,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1775,
+                  "name": "withContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "526:17:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1774,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "526:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1777,
+                  "name": "asRole",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "553:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1776,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "553:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1779,
+                  "name": "parentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "574:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1778,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1781,
+                  "name": "childId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "600:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1780,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1783,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "625:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1782,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1785,
+                  "name": "rlpData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "650:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1784,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "650:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:177:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1788,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "686:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1787,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "686:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "685:9:9"
+            },
+            "scope": 1802,
+            "src": "463:344:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1803,
+        "src": "75:738:9"
+      }
+    ],
+    "src": "2:812:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Registration.sol",
+    "exportedSymbols": {
+      "Registration": [
+        1802
+      ]
+    },
+    "id": 1803,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Role.sol",
+        "file": "./Role.sol",
+        "id": 1737,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 1913,
+        "src": "2:20:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 1738,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 635,
+        "src": "23:23:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Membership.sol",
+        "file": "./Membership.sol",
+        "id": 1739,
+        "nodeType": "ImportDirective",
+        "scope": 1803,
+        "sourceUnit": 348,
+        "src": "47:26:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1740,
+              "name": "Membership",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 347,
+              "src": "100:10:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Membership_$347",
+                "typeString": "contract Membership"
+              }
+            },
+            "id": 1741,
+            "nodeType": "InheritanceSpecifier",
+            "src": "100:10:9"
+          }
+        ],
+        "contractDependencies": [
+          347
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1802,
+        "linearizedBaseContracts": [
+          1802,
+          347
+        ],
+        "name": "Registration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1770,
+              "nodeType": "Block",
+              "src": "347:110:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1761,
+                        "name": "caller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1743,
+                        "src": "384:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1762,
+                        "name": "withContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1745,
+                        "src": "392:12:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1763,
+                        "name": "asRole",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1747,
+                        "src": "406:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1764,
+                        "name": "parentId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1749,
+                        "src": "414:8:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1765,
+                        "name": "childId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1751,
+                        "src": "424:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1766,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1753,
+                        "src": "433:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1767,
+                        "name": "rlpData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1755,
+                        "src": "442:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 1760,
+                      "name": "_registerMembership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 295,
+                      "src": "364:19:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_Role_$1912_$_t_contract$_Role_$1912_$_t_bytes32_$_t_bytes32_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (address,contract Role,contract Role,bytes32,bytes32,address,bytes memory) returns (bytes32)"
+                      }
+                    },
+                    "id": 1768,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "364:86:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1759,
+                  "id": 1769,
+                  "nodeType": "Return",
+                  "src": "357:93:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1771,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "registerMembership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1743,
+                  "name": "caller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "154:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1745,
+                  "name": "withContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "178:17:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1744,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "178:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1747,
+                  "name": "asRole",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "205:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1746,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "205:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1749,
+                  "name": "parentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "226:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1748,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1751,
+                  "name": "childId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "252:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1750,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "252:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1753,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "277:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1752,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "277:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1755,
+                  "name": "rlpData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "302:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1754,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:177:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1758,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1771,
+                  "src": "338:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1757,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:9:9"
+            },
+            "scope": 1802,
+            "src": "117:340:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1800,
+              "nodeType": "Block",
+              "src": "695:112:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1791,
+                        "name": "caller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1773,
+                        "src": "734:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1792,
+                        "name": "withContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1775,
+                        "src": "742:12:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1793,
+                        "name": "asRole",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1777,
+                        "src": "756:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1794,
+                        "name": "parentId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1779,
+                        "src": "764:8:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1795,
+                        "name": "childId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1781,
+                        "src": "774:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1796,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1783,
+                        "src": "783:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1797,
+                        "name": "rlpData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1785,
+                        "src": "792:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_Role_$1912",
+                          "typeString": "contract Role"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 1790,
+                      "name": "_unregisterMembership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 346,
+                      "src": "712:21:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_Role_$1912_$_t_contract$_Role_$1912_$_t_bytes32_$_t_bytes32_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (address,contract Role,contract Role,bytes32,bytes32,address,bytes memory) returns (bytes32)"
+                      }
+                    },
+                    "id": 1798,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "712:88:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 1789,
+                  "id": 1799,
+                  "nodeType": "Return",
+                  "src": "705:95:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1801,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "unregisterMembership",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1773,
+                  "name": "caller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "502:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1772,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1775,
+                  "name": "withContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "526:17:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1774,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "526:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1777,
+                  "name": "asRole",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "553:11:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Role_$1912",
+                    "typeString": "contract Role"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1776,
+                    "name": "Role",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1912,
+                    "src": "553:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Role_$1912",
+                      "typeString": "contract Role"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1779,
+                  "name": "parentId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "574:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1778,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1781,
+                  "name": "childId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "600:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1780,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1783,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "625:15:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1782,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1785,
+                  "name": "rlpData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "650:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1784,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "650:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:177:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1788,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1801,
+                  "src": "686:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1787,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "686:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "685:9:9"
+            },
+            "scope": 1802,
+            "src": "463:344:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1803,
+        "src": "75:738:9"
+      }
+    ],
+    "src": "2:812:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.0-beta.0",
+  "updatedAt": "2019-03-06T13:57:14.534Z"
+}

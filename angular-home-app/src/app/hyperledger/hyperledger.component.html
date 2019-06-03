@@ -1,0 +1,79 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="title">Demo - Hyperledger</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-chart">
+          <div class="card-header card-header-success">
+            <h4 class="card-title">Mortgage</h4>
+          </div>
+          <div class="card-body">
+            <div class="demo-single">
+              <h4>UCC Fillings App</h4>
+              <div class="icons">
+                <a target='_blank' href="https://drive.google.com/file/d/1ZAr_O8-8kKFNqLRL-apZBGz_L1xiJSO8/view">
+                  <fa-icon matTooltip="PPT" matTooltipClass="demo-tooltip" class="ppt" [icon]="faPpt"></fa-icon>
+                </a>
+                <a target='_blank' href="#">
+                  <fa-icon matTooltip="White Paper" matTooltipClass="demo-tooltip" class="whitepaper" [icon]="faWord"></fa-icon>
+                </a>
+                <a target='_blank' href="http://52.172.13.43:4100/">
+                  <fa-icon matTooltip="Demo" class="demo" matTooltipClass="demo-tooltip" [icon]="faDemo"></fa-icon>
+                </a>
+                <a target='_blank' (click)="openDialog('MGpFQPqISD4')">
+                  <fa-icon matTooltip="Video" class="video" matTooltipClass="demo-tooltip" [icon]="faVideo"></fa-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-chart">
+          <div class="card-header card-header-warning">
+            <h4 class="card-title">Logistics</h4>
+          </div>
+          <div class="card-body">
+            <div class="demo-single">
+              <h4>Trade-Finance</h4>
+              <div class="icons">
+                <a target='_blank' href="#">
+                  <fa-icon matTooltip="PPT" matTooltipClass="demo-tooltip" class="ppt" [icon]="faPpt"></fa-icon>
+                </a>
+                <a target='_blank' href="https://drive.google.com/file/d/1Yr8xaBkHH3zTp7lEasfkvB9pz6DTu7vp/view">
+                  <fa-icon matTooltip="White Paper" matTooltipClass="demo-tooltip" class="whitepaper" [icon]="faWord"></fa-icon>
+                </a>
+                <a target='_blank' href="#">
+                  <fa-icon matTooltip="Demo" matTooltipClass="demo-tooltip" [icon]="faDemo"></fa-icon>
+                </a>
+                <a target='_blank' (click)="openDialog('MGpFQPqISD4')">
+                  <fa-icon matTooltip="Video" class="video" matTooltipClass="demo-tooltip" [icon]="faVideo"></fa-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="legends">
+  <div class="single">
+      <span class="green"></span>
+      <p>Completed</p>
+  </div>
+  <div class="single">
+      <span class="yellow"></span>
+      <p>In Progress</p>
+  </div>
+  <div class="single">
+      <span class="red"></span>
+      <p>Proposed</p>
+  </div>
+</div>

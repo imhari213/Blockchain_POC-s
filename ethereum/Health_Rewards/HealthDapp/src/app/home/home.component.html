@@ -1,0 +1,50 @@
+<!-- <mat-toolbar>
+  Corporate Rewards</mat-toolbar> -->
+  <app-header></app-header>
+
+<div class="sub">
+  <a routerLink = "/Dashboard" ><span class="badge badge-primary">Dashboard</span></a>
+
+</div>
+
+
+<div class="container">
+
+  <form #form="ngForm" (ngSubmit)="addUser(user)">
+    <div class="example-container">
+      
+
+      <mat-form-field>
+        <input matInput placeholder="Contact No" name="contact" [(ngModel)]="user.contact" value= {{userinfo.contact}}>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Email ID" name="email" [(ngModel)]="user.email" value= {{userinfo.email}}>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter yout Age" name="age" [(ngModel)]="user.age" value= {{userinfo.age}}>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter your Goal" name="goal" [(ngModel)]="user.goal" >
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Wallet Address" name="walletAddress" [(ngModel)]="user.walletAddress" value= {{userinfo.walletId}}>
+      </mat-form-field>
+
+
+    </div>
+    <div class="btn">
+      <button mat-raised-button color="primary" type="submit">Set</button>
+    </div>
+  </form>
+
+  
+</div>
+
+<app-footer></app-footer>
+
+
+

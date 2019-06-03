@@ -1,0 +1,164 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #23214c;    
+}
+
+
+
+ .card {
+        width: 130px;
+        height: 195px;
+        position: relative;
+        display: inline-block;
+        margin: 50px;
+    }
+    .card .img-top {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 59px;
+    z-index: 99;
+    background: #0F2027;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 153%;
+    height: 85%;
+    color: white;
+
+    }
+    .card:hover .img-top {
+        display: inline;
+    }
+
+    .tex{
+
+            text-align: center;
+    /* top: 35px; */
+    padding: 27%;
+    font-size: 18px;
+}
+    
+
+
+/* RESPONSIVE PART */
+
+
+@media screen and (min-width: 925px) {   
+   .card {
+        width: 130px;
+        height: 195px;
+        position: relative;
+        display: inline-block;
+        margin: 50px;
+    }
+    .card .img-top {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 59px;
+    z-index: 99;
+   background: #0F2027;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 153%;
+    height: 85%;
+    color: white;
+
+    }
+    .card:hover .img-top {
+        display: inline;
+    }
+
+    .tex{
+
+            text-align: center;
+    /* top: 35px; */
+    padding: 27%;
+    font-size: 18px;
+}
+}
+
+@media screen and (max-width: 925px) {  
+
+   .card {
+        width: 130px;
+        height: 195px;
+        position: relative;
+        display: inline-block;
+        margin: 50px;
+    }
+    .card .img-top {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 59px;
+    z-index: 99;
+    background: #0F2027;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 153%;
+    height: 85%;
+    color: white;
+
+    }
+    .card:hover .img-top {
+        display: inline;
+    }
+
+    .tex{
+
+            text-align: center;
+    /* top: 35px; */
+    padding: 27%;
+    font-size: 18px;
+} 
+
+}
+
+@media screen and (max-width:768px){
+
+
+.card {
+            width: 172px;
+    height: 195px;
+    position: relative;
+    display: inline-block;
+    margin: 50px;
+    left: -33px;
+    }
+    .card .img-top {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 59px;
+    z-index: 99;
+    background: #0F2027;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 153%;
+    height: 85%;
+    color: white;
+
+    }
+    .card:hover .img-top {
+        display: inline;
+        left: 2px;
+    }
+
+    .tex{
+
+            text-align: center;
+    /* top: 35px; */
+    padding: 27%;
+    font-size: 18px;
+}
+
+}

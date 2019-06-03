@@ -1,0 +1,24 @@
+{
+  "name": "appraisaldao",
+  "version": "0.0.1",
+  "description": "Appraisal DAO",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "Employee",
+    "Appraisal",
+    "Blockchain",
+    "Ethereum",
+    "Solidity"
+  ],
+  "author": "Evoke",
+  "license": "MIT",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.5"
+  }
+}

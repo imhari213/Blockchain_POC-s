@@ -1,0 +1,458 @@
+{
+  "contractName": "RLPRegistration",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "name": "withContract",
+          "type": "address"
+        },
+        {
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "name": "parentId",
+          "type": "bytes32"
+        },
+        {
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "rlpData",
+          "type": "bytes"
+        }
+      ],
+      "name": "unregisterMembership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "name": "withContract",
+          "type": "address"
+        },
+        {
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "name": "parentId",
+          "type": "bytes32"
+        },
+        {
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "rlpData",
+          "type": "bytes"
+        }
+      ],
+      "name": "registerMembership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "asRole",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "childId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "name": "Registered",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052610402806100136000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632bef1a408114610050578063fcd009ee14610050575b600080fd5b34801561005c57600080fd5b50604080516020600460c43581810135601f81018490048402850184019095528484526100df94823573ffffffffffffffffffffffffffffffffffffffff9081169560248035831696604435841696606435966084359660a435909616953695929460e49492019181908401838280828437509497506100f19650505050505050565b60408051918252519081900360200190f35b60006101028888888888888861010e565b98975050505050505050565b600080600061011d858861034e565b91508773ffffffffffffffffffffffffffffffffffffffff166307bcb6aa8b30858a8a8a6040518763ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001856000191660001916815260200184600019166000191681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561025b578181015183820152602001610243565b50505050905090810190601f1680156102885780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b1580156102ac57600080fd5b505af11580156102c0573d6000803e3d6000fd5b505050506040513d60208110156102d657600080fd5b50516040805173ffffffffffffffffffffffffffffffffffffffff808c168252602082018b9052818301849052881660608201526001608082015290519192507f3f2aa18c26794287822dc6066f89faec8e22d215f75b9cd54d90597cc943e945919081900360a00190a19998505050505050505050565b60008115156103cd576040516c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff85168102825232818102601484015233918202602884015285929091906000903690434090603c8101848480828437909101928352505060405190819003602001902095506103d0945050505050565b50805b929150505600a165627a7a72305820124525cc4a58f99c6b875fcccb1145b7b0580adf30ab6339e8b66e8c044550780029",
+  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632bef1a408114610050578063fcd009ee14610050575b600080fd5b34801561005c57600080fd5b50604080516020600460c43581810135601f81018490048402850184019095528484526100df94823573ffffffffffffffffffffffffffffffffffffffff9081169560248035831696604435841696606435966084359660a435909616953695929460e49492019181908401838280828437509497506100f19650505050505050565b60408051918252519081900360200190f35b60006101028888888888888861010e565b98975050505050505050565b600080600061011d858861034e565b91508773ffffffffffffffffffffffffffffffffffffffff166307bcb6aa8b30858a8a8a6040518763ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001856000191660001916815260200184600019166000191681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561025b578181015183820152602001610243565b50505050905090810190601f1680156102885780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b1580156102ac57600080fd5b505af11580156102c0573d6000803e3d6000fd5b505050506040513d60208110156102d657600080fd5b50516040805173ffffffffffffffffffffffffffffffffffffffff808c168252602082018b9052818301849052881660608201526001608082015290519192507f3f2aa18c26794287822dc6066f89faec8e22d215f75b9cd54d90597cc943e945919081900360a00190a19998505050505050505050565b60008115156103cd576040516c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff85168102825232818102601484015233918202602884015285929091906000903690434090603c8101848480828437909101928352505060405190819003602001902095506103d0945050505050565b50805b929150505600a165627a7a72305820124525cc4a58f99c6b875fcccb1145b7b0580adf30ab6339e8b66e8c044550780029",
+  "sourceMap": "51:132:8:-;;;;;;;;;",
+  "deployedSourceMap": "51:132:8:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;463:344:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;463:344:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;463:344:9;;-1:-1:-1;463:344:9;;-1:-1:-1;;;;;;;463:344:9;;;;;;;;;;;;;;;;;;686:7;712:88;734:6;742:12;756:6;764:8;774:7;783;792;712:21;:88::i;:::-;705:95;463:344;-1:-1:-1;;;;;;;;463:344:9:o;1472:843:2:-;1699:7;1731:22;1841:21;1756:24;1762:7;1771:8;1756:5;:24::i;:::-;1731:49;;1865:6;:15;;;1898:6;1927:4;1950:14;1982:7;2007;2032;1865:188;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1865:188:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1865:188:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1865:188:2;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1865:188:2;2072:192;;;;;;;;;1865:188;2072:192;;;;;;;;;;;;;;;;;2245:4;2072:192;;;;;;1865:188;;-1:-1:-1;2072:192:2;;;;;;;;;;2286:13;1472:843;-1:-1:-1;;;;;;;;;1472:843:2:o;337:258::-;399:7;422:17;;418:171;;;462:76;;;;;;;;;;481:9;462:76;;;;;;;492:10;462:76;;;;;;;472:7;;481:9;;492:10;504:8;;;;524:12;514:23;;462:76;;;504:8;;;;462:76;;;;;;;;-1:-1:-1;;462:76:2;;;;;;;;;;;-1:-1:-1;455:83:2;;-1:-1:-1;;;;;455:83:2;418:171;-1:-1:-1;576:2:2;418:171;337:258;;;;:::o",
+  "source": "\nimport \"./RLP.sol\";\nimport \"./Registration.sol\";\n\ncontract RLPRegistration is Registration {\n    using RLP for RLP.RLPItem;\n    using RLP for RLP.Iterator;\n    using RLP for bytes;\n}",
+  "sourcePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/RLPRegistration.sol",
+  "ast": {
+    "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/RLPRegistration.sol",
+    "exportedSymbols": {
+      "RLPRegistration": [
+        1735
+      ]
+    },
+    "id": 1736,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/RLP.sol",
+        "file": "./RLP.sol",
+        "id": 1722,
+        "nodeType": "ImportDirective",
+        "scope": 1736,
+        "sourceUnit": 1721,
+        "src": "1:19:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Registration.sol",
+        "file": "./Registration.sol",
+        "id": 1723,
+        "nodeType": "ImportDirective",
+        "scope": 1736,
+        "sourceUnit": 1803,
+        "src": "21:28:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1724,
+              "name": "Registration",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1802,
+              "src": "79:12:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registration_$1802",
+                "typeString": "contract Registration"
+              }
+            },
+            "id": 1725,
+            "nodeType": "InheritanceSpecifier",
+            "src": "79:12:8"
+          }
+        ],
+        "contractDependencies": [
+          347,
+          1802
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1735,
+        "linearizedBaseContracts": [
+          1735,
+          1802,
+          347
+        ],
+        "name": "RLPRegistration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1728,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1726,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "104:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "98:26:8",
+            "typeName": {
+              "contractScope": null,
+              "id": 1727,
+              "name": "RLP.RLPItem",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 795,
+              "src": "112:11:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RLPItem_$795_storage_ptr",
+                "typeString": "struct RLP.RLPItem"
+              }
+            }
+          },
+          {
+            "id": 1731,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1729,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "135:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "129:27:8",
+            "typeName": {
+              "contractScope": null,
+              "id": 1730,
+              "name": "RLP.Iterator",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 800,
+              "src": "143:12:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Iterator_$800_storage_ptr",
+                "typeString": "struct RLP.Iterator"
+              }
+            }
+          },
+          {
+            "id": 1734,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1732,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "167:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "161:20:8",
+            "typeName": {
+              "id": 1733,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "175:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            }
+          }
+        ],
+        "scope": 1736,
+        "src": "51:132:8"
+      }
+    ],
+    "src": "1:182:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/RLPRegistration.sol",
+    "exportedSymbols": {
+      "RLPRegistration": [
+        1735
+      ]
+    },
+    "id": 1736,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/RLP.sol",
+        "file": "./RLP.sol",
+        "id": 1722,
+        "nodeType": "ImportDirective",
+        "scope": 1736,
+        "sourceUnit": 1721,
+        "src": "1:19:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/hari/Desktop/Appraisal/Appraisal/contracts/Registration.sol",
+        "file": "./Registration.sol",
+        "id": 1723,
+        "nodeType": "ImportDirective",
+        "scope": 1736,
+        "sourceUnit": 1803,
+        "src": "21:28:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1724,
+              "name": "Registration",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1802,
+              "src": "79:12:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registration_$1802",
+                "typeString": "contract Registration"
+              }
+            },
+            "id": 1725,
+            "nodeType": "InheritanceSpecifier",
+            "src": "79:12:8"
+          }
+        ],
+        "contractDependencies": [
+          347,
+          1802
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1735,
+        "linearizedBaseContracts": [
+          1735,
+          1802,
+          347
+        ],
+        "name": "RLPRegistration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1728,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1726,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "104:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "98:26:8",
+            "typeName": {
+              "contractScope": null,
+              "id": 1727,
+              "name": "RLP.RLPItem",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 795,
+              "src": "112:11:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RLPItem_$795_storage_ptr",
+                "typeString": "struct RLP.RLPItem"
+              }
+            }
+          },
+          {
+            "id": 1731,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1729,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "135:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "129:27:8",
+            "typeName": {
+              "contractScope": null,
+              "id": 1730,
+              "name": "RLP.Iterator",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 800,
+              "src": "143:12:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Iterator_$800_storage_ptr",
+                "typeString": "struct RLP.Iterator"
+              }
+            }
+          },
+          {
+            "id": 1734,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1732,
+              "name": "RLP",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1720,
+              "src": "167:3:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RLP_$1720",
+                "typeString": "library RLP"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "161:20:8",
+            "typeName": {
+              "id": 1733,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "175:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            }
+          }
+        ],
+        "scope": 1736,
+        "src": "51:132:8"
+      }
+    ],
+    "src": "1:182:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.0-beta.0",
+  "updatedAt": "2019-03-06T13:57:14.534Z"
+}

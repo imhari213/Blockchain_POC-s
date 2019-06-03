@@ -1,0 +1,51 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .mat-toolbar{
+      color: white;
+    background: #2f3132;
+    margin-bottom: 15px;
+  }
+
+  .btns{
+    background-color: #fa4801;
+    
+  }
+
+  .btn-primary{
+    color: #212529;
+  }
+  .subheading{
+      width: 13%;
+  }
+
+  .sub.mat-raised-button{
+    margin-left: 46px;
+  }
+  .badge-primary{
+    margin-top:23px;
+  }
+
+ .mat-raised-button{
+  position: absolute;
+
+ }
+
+
+ .badge-primary{
+ margin-left: 35px;
+ padding-bottom: 10px;
+ padding-top: 10px;
+ padding-left: 10px;
+ padding-right: 10px;
+ background-color: #ef8400;
+ }
+
+ 

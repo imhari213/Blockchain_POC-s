@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<script>
+  $(window).load(function () {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      setInterval: "1000"
+    });
+  });
+  $(function () {
+    SyntaxHighlighter.all();
+  });
+  $(window).load(function () {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      start: function (slider) {
+        $('body').removeClass('loading');
+      }
+    });
+  });
+
+</script>
+
+<body>
+<app-header></app-header>
+  <section class="slide1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-2 col-sm-4 col-12"></div>
+        <div class="col-lg-6 col-md-8 col-sm-4 col-12  text-center">
+
+
+          <h4 class="text-heading">Providing Blockchain Soloutions at every step </h4>
+          <h2 class="Mainheading">Now Get Fit & Gain Rewards with Healthy Behaviour</h2>
+
+
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-4 col-12"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-1"></div>
+  
+        <div class="col-md-4 col-sm-10 text-center">
+          <button class="loginBtn loginBtn--google" (click)="login()">
+            Login with Google
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-1"></div>
+      </div>
+    </div>
+  </section>
+  <!-- /Start your project here-->
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+  <!-- Footer -->
+</body>
+
+</html>

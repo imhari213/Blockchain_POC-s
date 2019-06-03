@@ -1,0 +1,143 @@
+<!-- <p>
+  dashboard works!
+</p>
+
+
+<button (click)="cal()">submit</button>
+
+<button (click)="claim()">claim</button> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Start your project here-->
+  <!-- <section>
+    <div class="container-fluid topnav">
+      <div class="row">
+
+        <div class=" col-lg-3 col-md-4 col-sm-4 col-12">
+          <a class="active" href="#home">Corporate Rewards</a>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section> -->
+  <app-header></app-header>
+  <section class="slide1">
+    <div class="goal">
+      <button type="button" class="btn btn-primary" (click) = goal()> Goal History</button>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        
+            
+       
+            
+        <div class="col-lg-3 col-md-2 col-sm-4 col-12">
+            
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-4 col-12  text-center textpada">
+
+         
+          <div class="">
+            <img src="icon1.jpeg" alt="" class="avatar" width="20%" height="50px">
+          </div>
+          <br>
+          <br>
+
+          <form>
+             
+              
+              <h5 class="alignments">Full Name</h5>
+              <input type="text" pattern="[A-Za-z]{3}" class="form-control" id="name" aria-describedby="name"
+                placeholder="Enter name" value={{info.username}}>
+
+            
+              <h5 class="alignments">Age</h5>
+              <input type="number" min="0" class="form-control" id="age" aria-describedby="age" placeholder="Enter Age"
+                value={{info.age}}>
+
+            <h5 class="alignments">Email</h5>
+              
+              <input type="email" pattern=".+@globex.com" required class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter email" value={{info.email}}>
+
+         
+
+
+          </form>
+
+          
+
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-4 col-12"></div>
+      </div>
+    </div>
+    <div class="textpad topp">
+      <div class="row">
+
+        <div class="col-md-4 col-sm-1"></div>
+
+        <div class="col-md-4 col-sm-10 text-center">
+
+          <button type="button" class="btn btn-primary " (click)="claim()">
+            Claim
+          </button>
+
+          <button type="submit" (click)="nav()" class="btn btn-primary">Set Goal</button>
+        </div>
+        <div class="col-md-4 col-sm-1" *ngIf="showmodal" id="modal-popup">
+          <div class="card-desk card-responsive">
+            <div class="card">
+              <div class="card-header text-center">Hello</div>
+              <div class="card-body text-center">Congratulations! You are Successfully claimed</div>
+              <div class="card-footer">
+                <button type="button" (click)="close()" class="btn" style="margin-left: 42%;">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- /Start your project here-->
+
+  <app-footer></app-footer>
+  <!-- The modal -->
+
+  <!-- Footer -->
+  <!-- <footer class="page-footer font-small  pt-4"> -->
+
+
+    <!-- Copyright -->
+    <!-- <div class="footer-copyright text-center py-3">© 2018 Copyright: All Rights Reserved.
+    </div> -->
+    <!-- Copyright -->
+
+  <!-- </footer> -->
+  <!-- Footer -->
+</body>
+
+</html>
